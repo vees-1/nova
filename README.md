@@ -1,103 +1,86 @@
-<div align="center">
+# NOVA 🌌
 
-# NOVA 
-Neural Online Vector-based Architecture
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
+[![Status](https://img.shields.io/badge/Status-In%20Development-orange.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+---
 
-A production-style cold-start recommendation system built using neural embeddings and fast vector retrieval.
+## Overview
 
+Traditional recommendation systems break down at the most critical moment: when you have a new user or a new product with no history. This is the cold-start problem, and it's especially painful in ecommerce where:
 
-<sub>
-<p>
-  <img src="https://img.shields.io/badge/ML-Two--Tower-blueviolet" />
-  <img src="https://img.shields.io/badge/Inference-FAISS-success" />
-  <img src="https://img.shields.io/badge/API-FastAPI-009688" />
-  <img src="https://img.shields.io/badge/Infra-Zero--Cost-orange" />
-  <img src="https://img.shields.io/badge/Status-Active%20Development-yellow" />
-</p>
-</sub>
+- New users see generic, irrelevant recommendations and immediately bounce
+- New products take weeks to accumulate enough interactions to surface organically
+- Small stores with sparse data can't compete with large-catalog platforms
 
-</div>
+NOVA is being built to solve this from first principles.
 
+Instead of relying on historical interaction data (clicks, purchases, ratings), NOVA will:
 
+- Represent both users and products as dense vectors in a shared semantic embedding space
+- Use semantic similarity to identify relevant items based on content and context
+- Retrieve recommendations via fast approximate nearest-neighbor search, enabling real-time inference at scale
 
-## 🔹 Overview
+```
+User Profile → Embedding Model → User Vector ──┐
+                                                 ├──▶ FAISS Index ──▶ Top-K Products
+Product Catalog → Embedding Model → Product Vectors ──┘
+```
 
-*NOVA* is a low-latency recommendation system designed specifically for *cold-start ecommerce scenarios*, where historical user interaction data (clicks, purchases, ratings) is *unavailable or sparse*.
+---
 
-Instead of relying on past behavior, NOVA:
-- Represents users and products as vectors in a shared embedding space
-- Uses *semantic similarity* to identify relevant items
-- Retrieves recommendations using fast vector search, enabling *real-time inference*
+## Status
 
+This project is currently under active development as part of a 6-month ML engineering internship. Below is the current progress:
 
-## 🔹 Problem
+| Module | Status |
+|---|---|
+| Dataset loading & EDA | 🔄 In Progress |
+| Product embedding generation | ⏳ Planned |
+| Dual-encoder model | ⏳ Planned |
+| FAISS index & retrieval | ⏳ Planned |
+| Online embedding updates | ⏳ Planned |
+| Evaluation framework | ⏳ Planned |
+| FastAPI serving layer | ⏳ Planned |
+| Demo dashboard | ⏳ Planned |
 
-Most traditional recommender systems depend on historical interactions.
+---
 
-They fail when:
-- 🆕 A user visits the platform for the first time
-- 🆕 A product is newly added to the catalog
-- 🆕 There is insufficient interaction data
+## Project Context
 
-These failure modes result in:
-- Poor personalization
-- Reduced engagement
-- Missed conversions
+NOVA is being developed during a ML engineering internship at Edreamz Technologies | Shopify Experts Partner Agency and Web Solutions Providers. The motivation is a recurring client pain point: small Shopify stores struggle with product discovery for new users, leading to high bounce rates on landing and collection pages. NOVA is designed to be lightweight enough to run on modest infrastructure while still providing meaningful recommendations from the very first session.
 
+---
 
-## 💡 Core Idea
+## Getting Started
 
-NOVA reframes recommendation as a *vector similarity problem*.
+*Setup instructions will be added as the project structure is finalized.*
 
-If a user vector is *close* to a product vector in embedding space, the product is relevant.
+---
 
-This approach allows NOVA to generate meaningful recommendations from the very first interaction, without relying on user history.
+## Roadmap
 
+- [ ] Exploratory data analysis on Olist dataset
+- [ ] Product embedding generation with Sentence-Transformers
+- [ ] FAISS-based ANN index and retrieval
+- [ ] Dual-encoder model training
+- [ ] Online embedding updates (cold → warm transition)
+- [ ] Offline evaluation framework (Precision@K, NDCG, Coverage)
+- [ ] Baseline comparisons (random, popularity, TF-IDF)
+- [ ] FastAPI serving layer
+- [ ] Streamlit demo dashboard
+- [ ] Multi-modal embeddings (product images + text)
 
-## 🔹 Architecture Components
+---
 
-### 🔹 Model 
-- Two-Tower Neural Network (User Tower + Item Tower)
-- PyTorch-based training
-- Text embeddings from product descriptions
-- Outputs fixed-size vectors for users and items
+## License
 
-### 🔹 Retrieval
-- FAISS in-memory vector index
-- Dot-product similarity search
-- Optimized for low-latency top-K retrieval
+MIT License — see [LICENSE](LICENSE) for details.
 
-### 🔹 API
-- FastAPI backend
-- `/recommend` endpoint
-- Accepts user context JSON
-- Returns ranked product recommendations
+---
 
-
-## 🔹 Tech Stack
-<p>
-  <img src="https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/ML-PyTorch-EE4C2C?logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/NLP-HuggingFace-FFD21E?logo=huggingface&logoColor=black" />
-  <img src="https://img.shields.io/badge/Vector%20Search-FAISS-success" />
-  <img src="https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Frontend-Vanilla%20JS-lightgrey" />
-</p>
-
-
-## 🔹 Goals
-
-- ✅ Handle cold-start users and products gracefully
-- ✅ Maintain low inference latency
-- ✅ Ensure reproducibility and clean system boundaries
-- ✅ Prioritize engineering correctness over model complexity
-- ✅ Build a deployable, end-to-end ML system
-
-## 🔹 Status
-
-🚧 Currently under active development
-
+<p align="center">Built with curiosity and way too much coffee ☕</p>
 
 
 
