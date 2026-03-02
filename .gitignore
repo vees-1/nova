@@ -21,7 +21,6 @@ env/
 *.ipynb_checkpoints
 
 # Models & large files
-*.npy
 *.pkl
 *.pt
 *.pth
