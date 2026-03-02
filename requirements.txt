@@ -15,7 +15,7 @@ pydantic
 
 # Dashboard
 streamlit
-altair
+altair==4.2.2
 
 # Visualization
 matplotlib
