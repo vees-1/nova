@@ -1,48 +1,48 @@
+# Data
+data/
+
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
-*.pyd
-*.so
+.Python
 *.egg-info/
+dist/
+build/
 .eggs/
-.env
-.venv/
+
+# Virtual environment
 venv/
-ENV/
+.venv/
+env/
 
-
-# Jupyter / Experiments
+# Jupyter
 .ipynb_checkpoints/
-notebooks/
+*.ipynb_checkpoints
 
-
-# ML Artifacts (DO NOT COMMIT)
-artifacts/
+# Models & large files
+*.npy
+*.index
+*.pkl
 *.pt
 *.pth
-*.onnx
-*.faiss
+*.bin
 
+# Environment variables
+.env
+.env.*
 
-# Data (Raw / Generated)
-data/raw/
-data/processed/
-data/synthetic/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-
-# Logs & Outputs
-logs/
-*.log
-outputs/
-results/
-
-
-# OS Files
+# OS
 .DS_Store
 Thumbs.db
 
-
-# IDE / Editor
-.vscode/
-.idea/
+# Logs
+*.log
+logs/
+mlruns/

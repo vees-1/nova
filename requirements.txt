@@ -1,0 +1,25 @@
+# Core data
+numpy
+pandas
+
+# ML & embeddings
+sentence-transformers
+scikit-learn
+umap-learn
+faiss-cpu
+
+# API
+fastapi
+uvicorn[standard]
+pydantic
+
+# Dashboard
+streamlit
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Utilities
+tqdm
