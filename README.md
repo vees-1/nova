@@ -49,7 +49,7 @@ This project is currently under active development as part of a 6-month ML engin
 
 ## Project Context
 
-NOVA is being developed during a ML engineering internship at Edreamz Technologies | Shopify Experts Partner Agency and Web Solutions Providers. The motivation is a recurring client pain point: small Shopify stores struggle with product discovery for new users, leading to high bounce rates on landing and collection pages. NOVA is designed to be lightweight enough to run on modest infrastructure while still providing meaningful recommendations from the very first session.
+The motivation is a recurring client pain point: small Shopify stores struggle with product discovery for new users, leading to high bounce rates on landing and collection pages. NOVA is designed to be lightweight enough to run on modest infrastructure while still providing meaningful recommendations from the very first session.
 
 ---
 
