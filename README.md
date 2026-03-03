@@ -69,17 +69,6 @@ Where `w` is interaction weight: view=0.1, cart add=0.3, purchase=1.0. The syste
 
 ---
 
-## Dashboard
-
-Four interactive tabs:
-
-- **Search** — Embed any text query and retrieve semantically similar products
-- **Browse** — Category cold-start using centroid vectors (71 categories)
-- **Similar** — Find products similar to any item in the catalog by ID
-- **Session** — Live simulator: record views, cart adds, and purchases to watch the recommendation set personalise in real time
-
----
-
 ## License
 
 MIT — see [LICENSE](LICENSE) for details.
